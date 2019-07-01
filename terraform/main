@@ -1,0 +1,9 @@
+terraform {
+  required_version = "> 0.12.1"
+  WORKSPACES
+}
+
+provider "aws" {
+  region = "${var.region}"
+}
+

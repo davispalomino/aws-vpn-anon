@@ -1,0 +1,32 @@
+{
+    "variables": {
+      "Var_region": "",
+      "Var_subnet_id": "",
+      "Var_instance_type": "",
+      "Var_source_ami": "",
+      "Var_project": "",
+      "Var_owner": "",
+      "Var_usuario": "",
+      "Var_password": ""
+    },
+    "builders": [{
+      "type": "amazon-ebs",
+      "region": "{{user `Var_region`}}",
+      "subnet_id": "{{user `Var_subnet_id`}}",
+      "instance_type": "{{user `Var_instance_type`}}",
+      "source_ami": "{{user `Var_source_ami`}}",
+      "ssh_username": "ubuntu",
+      "ami_name": "{{user `Var_owner`}}-{{user `Var_project`}}-{{timestamp}}",
+      "tags": {
+        "Name": "{{user `Var_owner`}}-{{user `Var_project`}}",
+        "OS": "Ubuntu",
+        "Version": "Latest"
+      }
+    }],
+    "provisioners" : [{
+      "type" : "ansible",
+      "user" : "ubuntu",
+      "playbook_file" : "./ansible/playbook.yml",
+      "extra_arguments": [ "--tags", "default", "--extra-vars", "usuario={{user `Var_usuario`}} password={{user `Var_password`}}"]
+    }]
+  }

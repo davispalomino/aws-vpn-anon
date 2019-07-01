@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become: true
+  tasks:
+    - name: Copiar el script a la ruta home
+      copy:
+        src : "script.sh"
+        dest: "/home/script.sh"
+        mode: 0775
+      tags: [default]
+    - name: Execute script
+      shell: sed --follow-symlinks -i 's|^exit 0|sh /home/script.sh {{usuario}} {{password}} \nexit 0|g' /etc/rc.local
+      tags: [default]
