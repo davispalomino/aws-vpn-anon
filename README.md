@@ -3,14 +3,15 @@
 
 Despliega tu propia red VPN (Point-to-Point) para salvaguardar tu privacidad, anonimato y sin limitaciones.
 
-La instancia que se desplegara será de tipo spot (https://aws.amazon.com/es/ec2/spot/). En cuanto al dspliegue el estado de terraform puede ser guardado en un bucket aws s3 (https://www.terraform.io/docs/backends/types/s3.html), terraform enterprise (https://www.terraform.io/docs/enterprise/index.html) y de manera local, al momento de desconectarse de la VPN se eliminará de manera automatica la infraestructura y el estado de terraform (tfstate).
+La instancia que se desplegara será de tipo spot (https://aws.amazon.com/es/ec2/spot/). En cuanto al despliegue el estado de terraform puede ser guardado en un bucket aws s3 (https://www.terraform.io/docs/backends/types/s3.html), terraform enterprise (https://www.terraform.io/docs/enterprise/index.html) y de manera local, al momento de desconectarse de la VPN se eliminará de manera automatica la infraestructura y el estado de terraform (tfstate).
 
 ## Requisitos
     - Cuenta AWS secret-access key
-    - Packer https://www.packer.io/downloads.html
-    - Ansible https://www.ansible.com/resources/get-started
-    - Terraform https://www.terraform.io/downloads.html
-    - Centos 7 (en caso de tener otro sistema operativo deberas editar la linea 184 del archivo Makefile "sudo yum install -y ppp pptp pptp-setup")
+    - AWS-cli (https://aws.amazon.com/es/cli/)
+    - Packer (https://www.packer.io/downloads.html)
+    - Ansible (https://www.ansible.com/resources/get-started)
+    - Terraform (https://www.terraform.io/downloads.html)
+    - Centos 7* (en caso de tener otro distro deberas editar la línea 184 del archivo Makefile "sudo yum install -y ppp pptp pptp-setup" reemplazarlo según su distro)
 
 ## Variables Requeridas
 | Name | Description | Type | Default | Required |
