@@ -3,3 +3,4 @@
 main.tf
 terraform.tfstate.backup
 terraform.tfstate
+spot.info
