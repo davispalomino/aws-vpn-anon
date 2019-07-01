@@ -1,5 +1,5 @@
 .terraform
 .terraformrc
 main.tf
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
+terraform.tfstate.backup
+terraform.tfstate
