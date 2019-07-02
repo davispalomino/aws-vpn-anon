@@ -1,5 +1,4 @@
 resource "aws_security_group" "this" {
-  name        = "sg-${lower(var.owner)}-${lower(var.project)}"
   description = "Allow TLS inbound traffic"
   vpc_id      = "${data.aws_subnet.this.vpc_id}"
   egress {
