@@ -95,7 +95,7 @@ enterprisetf:
 	@make enterpriseinit
 
 localtf:
-	@echo "*******CREATE LOCAL TF-STATE [Terraform Enterprise]*******" && \
+	@echo "*******CREATE LOCAL TF-STATE *******" && \
 	rm -rf terraform/main.tf && \
 	cp -R terraform/main terraform/main.tf && \
 	sed -i 's|WORKSPACES||g' terraform/main.tf
