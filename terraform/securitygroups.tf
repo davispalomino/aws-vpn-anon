@@ -1,5 +1,4 @@
 resource "aws_security_group" "this" {
-  description = "Allow TLS inbound traffic"
   vpc_id      = "${data.aws_subnet.this.vpc_id}"
   egress {
     from_port       = 0
