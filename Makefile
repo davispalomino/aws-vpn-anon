@@ -49,7 +49,6 @@ INSTANCE=t2.micro
 MI_IP=$(shell curl -s ifconfig.me/ip)
 SECONDS=100
 
-# quickstart: build iniciar plan deploy vpnaccess
 quickstart: build validatortf plan deploy vpnaccess
 	@echo "The instance was created and the connection to the VPN was successfully"
 

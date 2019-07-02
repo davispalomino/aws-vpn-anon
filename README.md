@@ -11,7 +11,7 @@ La instancia que se desplegara será de tipo spot (https://aws.amazon.com/es/ec2
     - Packer (https://www.packer.io/downloads.html)
     - Ansible (https://www.ansible.com/resources/get-started)
     - Terraform (https://www.terraform.io/downloads.html)
-    - Centos 7* (en caso de tener otro distro deberas editar la línea 184 del archivo Makefile "sudo yum install -y ppp pptp pptp-setup" reemplazarlo según su distro)
+    - Centos 7* (en caso de tener otra distro deberas editar la línea 184 del archivo Makefile "sudo yum install -y ppp pptp pptp-setup" reemplazarlo según su distro)
 
 ## Variables Requeridas
 | Name | Description | Type | Default | Required |
@@ -36,3 +36,6 @@ make disconnect
 
 ## Infraestructura
 ![picture](imgs/infraestructura.png)
+
+##
+[![asciicast](https://asciinema.org/a/2iejMOpmMqDnLGTf8xTQ3SrB6.svg)](https://asciinema.org/a/2iejMOpmMqDnLGTf8xTQ3SrB6)
