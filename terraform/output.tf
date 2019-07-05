@@ -13,5 +13,5 @@ output "price" {
   value = "${data.local_file.spot-ec2.content}"
 }
 output "ipPublic" {
-  value = "${aws_instance.this.public_ip}"
+  value = "${aws_spot_instance_request.this.public_ip}"
 }

@@ -2,7 +2,7 @@
 # VARIABLES REQUERIDAS
 ######################
 # REGION: Region de despliegue de infraestructura.
-# TYPE:	  El tipo de servidor para la conexión VPN.
+# TYPE:	  El tipo de servidor para la conexión VPN standar/advance/high.
 # SUBNET: La Subnet en la que se desplegara la infraestructura (requerida - PUBLIC).
 # TFSTATE:Especificar si el tfstate se guardara en s3(bucket), enterprise(terraform) o local (https://www.terraform.io/docs/state/)
 #		  local/s3/enterprise si desea usar enterprise debe cambiar la variable ORGANIZATION y agregar el Token
