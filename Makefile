@@ -47,7 +47,7 @@ BUCKET=$(shell echo ${OWNER}-${PROJECT}-estado| tr '[:upper:]' '[:lower:]')
 #			y con todos los servicios ejecutandose. aws s3 mb s3://${BUUCKET} --region ${REGION} --output text 2>&1
 INSTANCE=t2.micro
 MI_IP=$(shell curl -s ifconfig.me/ip)
-SECONDS=100
+SECONDS=120
 
 quickstart: build validatortf plan deploy vpnaccess
 	@echo "The instance was created and the connection to the VPN was successfully"
