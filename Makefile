@@ -254,6 +254,7 @@ destroy: tfdestroy
 	fi
 exitvpn:
 	@echo "*******DISCONNECTING VPN******"
+	@sudo ifconfig ppp0 down
 	@sudo killall pppd
 	@sleep 5s
 	@echo "Disconnected from the VPC"
