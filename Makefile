@@ -198,7 +198,7 @@ vpnconect:
 	sleep 5s
 
 vpnaccess: vpnconect
-ifeq ($(MI_IP), $(shell curl -s ifconfig.me/ip ))
+ifneq ($(MI_IP), $(shell curl -s ifconfig.me/ip ))
 	@echo "Error de Conexion, por favor ejecute: make reconexion"
 else
 	@sleep 5s
